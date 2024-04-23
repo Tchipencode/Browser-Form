@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+   <title>Browser Form</title>
+</head>
+<body>
+   <main class="content">
+      
+      <form action="" id="form" novalidate>
+         <div>
+            <span class="formError"></span>
+         </div>
+         <div class="form-input">
+            <label for="firstName">
+               <p>*First Name</p>
+               <input type="text" id="firstName" name="firstName" placeholder="John" required>
+               <span class="error"></span>
+               </input>
+            </label>
+            <label for="lastName">
+               <p>*Last Name</p>
+               <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
+               <span class="error"></span>
+               </input>
+            </label>
+            <label for="email">
+               <p>*Email</p>
+               <input type="email" id="email" name="email" placeholder="smith@gmail.com" required>
+               <span class="error"></span>
+               </input>
+            </label>
+            <label for="country">
+               <p>*Country</p>
+               <select name="country" id="country">
+                  <option value="default">Choice country...</option>
+                  <option value="Cameroon">Cameroon</option>
+                  <option value="Centrafrique">Centrafrique</option>
+                  <option value="Gabon">Gabon</option>
+                  <option value="Tchad">Tchad</option>
+               </select>
+               <span class="error"></span>
+            </label>           
+            <label for="zipCode">
+               <p>*Zip Code</p>
+               <input type="text" id="zipCode" name="zipCode" placeholder="00000-0000" pattern="/^[0-9]{5}(?:-[0-9]{4})?$/;" required>
+               <span class="error"></span>
+               </input>
+            </label>
+            <label for="password">
+               <p>*Password</p>
+               <input type="password" id="password" name="password" required>
+               <span class="error"></span>
+               </input>
+            </label>
+            <label for="confirmPassword">
+               <p>*Confirm Password</p>
+               <input type="password" id="confirmPassword" name="confirmPassword" required>
+               <span class="error"></span>
+               </input>
+            </label>
+         </div>
+         
+         <div class="form-submit">
+            <button type="submit" id="submit">Submit</button> 
+            <button type="button" id="cancel">Cancel</button> 
+         </div>
+      </form>
+   </main>
+   <script src="script.js"></script>
+   
+</body>
+</html>
